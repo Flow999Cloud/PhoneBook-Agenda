@@ -1,0 +1,23 @@
+<template name="ContactList">
+    <table>
+        <thead>
+        <tr>
+            <th><input type="checkbox" name="CheckAll" disabled="{{#unless contacts.count}}disabled{{/unless}}"></th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        </thead>
+        <tbody>
+            {{#if contacts.count}}
+                {{#each contacts}}
+                    {{> ContactItem}}
+                {{/each}}
+            {{else}}
+                <tr>
+                    <td colspan="4" class="text-center inner-t-m inner-b-m">There are no contacts in this view.</td>
+                </tr>
+            {{/if}}
+        </tbody>
+    </table>
+</template>

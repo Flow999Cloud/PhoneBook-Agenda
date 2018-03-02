@@ -1,0 +1,14 @@
+<template name="Home">
+    <section>
+        <div class="card toolbar">
+            <a href="/contacts/new" class="button icon-button secondary create"><i class="icon-addition"></i>New Contact</a>
+            <a href="#" class="button icon-button secondary delete {{#if isDeleteEnable}}disabled{{/if}}"><i class="icon-trash"></i>Delete selected</a>
+            <input type="search" name="search" class="search" placeholder="Find a contact..."/>
+        </div>
+    </section>
+    <section>
+        <div class="card">
+            {{> ContactList contacts=contacts}}
+        </div>
+    </section>
+</template>

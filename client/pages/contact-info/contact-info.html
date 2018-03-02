@@ -1,0 +1,31 @@
+<template name="ContactInfo">
+    <form class="contact-info" action="/">
+        <section>
+            <div class="card toolbar">
+                {{#if isCreateMode}}
+                    <button type="submit" class="button icon-button secondary create"><i class="icon-checkmark"></i>Save</button>
+                {{ else }}
+                    <button type="submit" class="button icon-button secondary update" data-id="{{contact._id}}"><i class="icon-checkmark"></i>Update</button>
+                {{/if}}
+
+                <button type="button" href="/" class="button icon-button secondary cancel"><i class="icon-checkmark"></i>Cancel</button>
+            </div>
+        </section>
+        <section>
+            <div class="card">
+                <div class="info-name outer-t-6xs outer-b-xxxs">
+                    <label>Name</label>
+                    <input type="text" name="Name" value="{{contact.name}}" placeholder="Name" required>
+                </div>
+                <div class="info-name outer-b-xxxs">
+                    <label>Email</label>
+                    <input type="email" name="Email" value="{{contact.email}}" placeholder="Email" required>
+                </div>
+                <div class="info-name outer-b-4xs">
+                    <label>Phone number</label>
+                    <input type="text" name="Phone" value="{{contact.phone}}" placeholder="+1 234 4567890" required>
+                </div>
+            </div>
+        </section>
+    </form>
+</template>

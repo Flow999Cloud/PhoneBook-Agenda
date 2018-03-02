@@ -1,0 +1,13 @@
+<template name="AppBody">
+    <div id="content-container" class="content-container">
+
+        {{> nav}}
+
+        {{#if currentUser }}
+            <article>
+                {{> yield}}
+            </article>
+        {{/if}}
+
+    </div>
+</template>

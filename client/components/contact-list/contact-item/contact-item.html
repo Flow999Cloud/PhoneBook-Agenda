@@ -1,0 +1,8 @@
+<template name="ContactItem">
+    <tr>
+        <td class="contact__select"><input type="checkbox" name="contactId" value="{{_id}}"></td>
+        <td class="contact__name"><a href="contacts/{{_id}}" class="update" title="{{name}}">{{name}}</a></td>
+        <td class="contact__email">{{email}}</td>
+        <td class="contact__phone">{{phone}}</td>
+    </tr>
+</template>
