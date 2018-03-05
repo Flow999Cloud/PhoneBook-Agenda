@@ -1,6 +1,5 @@
-# Phone Book Agenda
-1. Simple and Fundamental Meteor Project using Blaze Template
-2. Test Project for Codemyworld.com
+# Phone Book App
+Simple Phone Book App using Meteor(Blaze Template)
 
 ## Initial Credential
 User: test@test.com
